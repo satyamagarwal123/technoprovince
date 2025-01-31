@@ -816,7 +816,7 @@ section,
   z-index: 3;
 }
 
-.hero h2 {
+#h1,.hero h2 {
   margin: 0;
   font-size: 56px;
   font-weight: 700;
@@ -1285,7 +1285,7 @@ section,
   margin: 10px 0 5px 0;
 }
 
-.testimonials .testimonial-item h4 {
+.testimonials .testimonial-item  h3:nth-of-type(2) {
   font-size: 14px;
   margin: 0 0 15px 0;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
@@ -1707,3 +1707,17 @@ section,
  color: #FFC451;
 }
 
+#support{
+  color: var(--heading-color);
+  font-size: 40px;
+  display: block;
+  font-weight: 700;
+  line-height: 40px;
+  }
+
+  #h2{
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    font-weight: light;
+    }
