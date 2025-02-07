@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -15,7 +16,7 @@
   <title>Techno Province | IT Services | Data Scraping |Digital Marketing | Video &amp; Animation</title>
   <meta name="description" content="Techno Province experts help you for Data Scraping, IT support, web development, and custom tech solutions to enhance your business operations and digital presence.">
   <meta name="keywords" content="techno province, data scraping, web scraping,  web scraping solutions, data analysis, website designing, digital marketing, video creations, it services, data analytics">
-
+  
   <!-- Favicons -->
   <link href="assets/img/Techno Province.png" rel="icon">
 
@@ -633,6 +634,9 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+  <div id="loading-overlay">
+    <div class="spinner"></div>
+  </div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -664,11 +668,13 @@
         subject: document.getElementById('Subject').value, 
         message: document.getElementById('Message').value 
       }; 
- 
+      document.getElementById('loading-overlay').style.display = 'flex';
       // Send form data with EmailJS 
       emailjs.send("service_yneumu3", "template_al5acas", formData) // Replace with your Service ID and Template ID 
         .then((response) => { 
-          swal("Successfull", "You data successfull received ", "success"); 
+          
+          window.location.href = 'thank-you.html';
+          // swal("Successfull", "You data successfull received ", "success"); 
           // console.log('SUCCESS!', response.status, response.text); 
           contactForm.reset(); // Reset the form on successful submission 
         }, (error) => { 
