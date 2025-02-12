@@ -40,6 +40,8 @@
 }
 .home-button:hover {    background: #556270;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);    transform: scale(1.05);
+  background-color: #FFC451;
+  color: black;
 }
 /* Animated circles */.circle {
   position: absolute;    border: 4px solid rgba(255, 255, 255, 0.4);
