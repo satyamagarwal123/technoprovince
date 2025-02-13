@@ -682,9 +682,10 @@ form.addEventListener('submit', async (e) => {
       method: 'POST',
       body: formData
     });
-    
+    document.getElementById('loading-overlay').style.display = 'flex';
     if (response.ok) {
-      swal("Successfull", "Your messege successfully sent ", "success"); 
+      window.location.href = 'thank-you.html';
+      // swal("Successfull", "Your messege successfully sent ", "success"); 
       form.reset(); // Clear the form after submission
     } else {
       swal("Error,Meesage not sent");
