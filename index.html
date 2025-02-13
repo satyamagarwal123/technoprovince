@@ -407,7 +407,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/team_photo/Techno-Province-Steph Jo.png" class="testimonial-img" alt="Techno Province">
+                <img src="assets/img/fornova.png" class="testimonial-img" alt="Techno Province">
                 <h3>Elad Lievoich</h3>
                 <h3>Fornova</h3>
                 <div class="stars">
@@ -428,7 +428,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/team_photo/Techno-Province-Steph Jo.png" class="testimonial-img" alt="Techno Province">
+                <img src="assets/img/fcm.png" class="testimonial-img" alt="Techno Province">
                 <h3>Gaurav Khanna</h3>
                 <h3>FCM</h3>
                 <div class="stars">
@@ -509,22 +509,23 @@
             <form id="contactForm"> 
               <div class="row gy-4"> 
                 <div class="col-md-6"> 
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" id="Name" required autocomplete="name"> 
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" id="name" required autocomplete="name"> 
                 </div> 
                 <div class="col-md-6"> 
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" id="Email" required autocomplete="email"> 
-                </div> 
+                  <input type="text" name="contact" class="form-control" placeholder="Contact number" id="contact" required> 
+                </div>
                 <div class="col-md-6"> 
-                  <input type="text" name="contact" class="form-control" placeholder="Contact number" id="Contact" required> 
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" id="email" required autocomplete="email"> 
                 </div> 
-                <div class="col-md-12"> 
+                
+                <!-- <div class="col-md-12"> 
                   <input type="text" class="form-control" name="subject" placeholder="Subject" id="Subject" required> 
-                </div> 
+                </div>  -->
                 <div class="col-md-12"> 
-                  <textarea id="Message" class="form-control" name="message" rows="6" placeholder="Message" required></textarea> 
+                  <textarea id="message" class="form-control" name="message" rows="6" placeholder="Message" required></textarea> 
                 </div> 
                 <div class="col-md-12 text-center"> 
-                  <button type="button" onclick="Send()" class="btn btn-outline-warning">Send Message</button> 
+                  <button type="submit" class="btn btn-outline-warning">Send Message</button> 
                 </div> 
               </div> 
             </form>
@@ -653,36 +654,34 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <script>
-    <!-- function _0x5960() { var _0x159bdb = ['388235sBkbbI', 'send', 'BE0E0B293B9C98E38AA85F6ABEC3DCBCC8B0', 'Subject', '1089072fExynx', 'Successfull', '504zotToV', 'success', '129666xFRmvx', 'connect@technoprovince.com', 'Message', 'connecttravelprovince@gmail.com', '966159EgEOxf', '12zfHFDm', 'smtp.elasticemail.com', 'getElementById', 'Error,Message\x20not\x20sent', '10iqTrYO', '71VLbwRd', '20SfXkNr', '1200353qGrtNQ', '<br/>\x20Contact\x20Number:\x20', '726950UCObJE', 'Contact', 'Email', 'You\x20data\x20successfull\x20received\x20', '<br/>\x20Email:\x20', 'value']; _0x5960 = function () { return _0x159bdb; }; return _0x5960(); } function _0x1a70(_0x538843, _0x15e33c) { var _0x596065 = _0x5960(); return _0x1a70 = function (_0x1a7021, _0x56b49b) { _0x1a7021 = _0x1a7021 - 0x17a; var _0x585d22 = _0x596065[_0x1a7021]; return _0x585d22; }, _0x1a70(_0x538843, _0x15e33c); } (function (_0x1bdd1c, _0x323c4a) { var _0x438edc = _0x1a70, _0x172142 = _0x1bdd1c(); while (!![]) { try { var _0x507068 = -parseInt(_0x438edc(0x182)) / 0x1 * (parseInt(_0x438edc(0x192)) / 0x2) + -parseInt(_0x438edc(0x194)) / 0x3 * (parseInt(_0x438edc(0x183)) / 0x4) + -parseInt(_0x438edc(0x18c)) / 0x5 * (-parseInt(_0x438edc(0x17d)) / 0x6) + parseInt(_0x438edc(0x186)) / 0x7 + parseInt(_0x438edc(0x190)) / 0x8 + parseInt(_0x438edc(0x17c)) / 0x9 * (parseInt(_0x438edc(0x181)) / 0xa) + -parseInt(_0x438edc(0x184)) / 0xb; if (_0x507068 === _0x323c4a) break; else _0x172142['push'](_0x172142['shift']()); } catch (_0x108937) { _0x172142['push'](_0x172142['shift']()); } } }(_0x5960, 0x26f10)); function Send() { var _0x2ee269 = _0x1a70, _0x1bbe07 = document[_0x2ee269(0x17f)]('Name')[_0x2ee269(0x18b)], _0x17a43e = document['getElementById'](_0x2ee269(0x188))[_0x2ee269(0x18b)], _0x567857 = document[_0x2ee269(0x17f)]('Contact')[_0x2ee269(0x18b)], _0x35bff1 = document[_0x2ee269(0x17f)](_0x2ee269(0x18f))[_0x2ee269(0x18b)], _0x3f9a6d = document[_0x2ee269(0x17f)](_0x2ee269(0x17a))['value'], _0x27f2de = 'Name:\x20' + _0x1bbe07 + _0x2ee269(0x18a) + _0x17a43e + _0x2ee269(0x185) + _0x567857 + '<br/>\x20Message:\x20' + _0x3f9a6d; console['log'](_0x27f2de), Email[_0x2ee269(0x18d)]({ 'Host': _0x2ee269(0x17e), 'Username': _0x2ee269(0x17b), 'Password': _0x2ee269(0x18e), 'To': _0x2ee269(0x17b), 'From': _0x2ee269(0x195), 'Subject': _0x35bff1, 'Body': _0x27f2de })['then'](_0x7cc399 => { var _0xa70dc3 = _0x2ee269; _0x7cc399 == 'OK' ? (swal(_0xa70dc3(0x191), _0xa70dc3(0x189), _0xa70dc3(0x193)), _0x1bbe07[_0xa70dc3(0x18b)] = '') : swal(_0xa70dc3(0x180), _0x7cc399); }), document['getElementById']('Name')[_0x2ee269(0x18b)] = '', document[_0x2ee269(0x17f)]('Email')[_0x2ee269(0x18b)] = '', document[_0x2ee269(0x17f)](_0x2ee269(0x187))[_0x2ee269(0x18b)] = '', document[_0x2ee269(0x17f)](_0x2ee269(0x18f))[_0x2ee269(0x18b)] = '', document[_0x2ee269(0x17f)](_0x2ee269(0x17a))['value'] = ''; } -->
-    (function() { 
-      emailjs.init("I-hz0R_bChg4WMAx2"); // Replace with your EmailJS User ID 
-    })(); 
- 
-    function Send() { 
-      // Collect form data 
-      const contactForm = document.getElementById('contactForm'); 
-      const formData = { 
-        name: document.getElementById('Name').value, 
-        email: document.getElementById('Email').value, 
-        contact: document.getElementById('Contact').value, 
-        subject: document.getElementById('Subject').value, 
-        message: document.getElementById('Message').value 
-      }; 
-      document.getElementById('loading-overlay').style.display = 'flex';
-      // Send form data with EmailJS 
-      emailjs.send("service_yneumu3", "template_al5acas", formData) // Replace with your Service ID and Template ID 
-        .then((response) => { 
-          
-          window.location.href = 'thank-you.html';
-          // swal("Successfull", "You data successfull received ", "success"); 
-          // console.log('SUCCESS!', response.status, response.text); 
-          contactForm.reset(); // Reset the form on successful submission 
-        }, (error) => { 
-          alert('Failed to send message. Please try again.'); 
-          swal("Error,Meesage not sent", error); 
-          // console.log('FAILED...', error); 
-        }); 
+    // JavaScript to send form data to Google Apps Script
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyBSJ2E5esNBPt1-j9xpyzYyy5CfEqsqlPCLQYWml3fdz8A_idqvjsbNeGdZxGIg3fb/exec'; // Replace with your Apps Script Web App URL
+const form = document.getElementById('contactForm');
+
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault(); // Prevent default form submission
+  
+  const formData = new FormData(form);
+  
+  try {
+    const response = await fetch(scriptURL, {
+      method: 'POST',
+      body: formData
+    });
+    document.getElementById('loading-overlay').style.display = 'flex';
+    if (response.ok) {
+      window.location.href = 'thank-you.html';
+      // swal("Successfull", "Your messege successfully sent ", "success"); 
+      form.reset(); // Clear the form after submission
+    } else {
+      swal("Error,Meesage not sent");
     }
+  } catch (error) {
+    swal("Error,Meesage not sent", error);
+    console.error('Error:', error);
+  }
+});
 
   </script>
 
