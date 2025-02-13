@@ -676,13 +676,13 @@ form.addEventListener('submit', async (e) => {
   const scriptURL = `https://script.google.com/macros/s/${acces_key}`; // Replace with your Apps Script Web App URL
   
   const formData = new FormData(form);
-  
+  document.getElementById('loading-overlay').style.display = 'flex';
   try {
     const response = await fetch(scriptURL, {
       method: 'POST',
       body: formData
     });
-    document.getElementById('loading-overlay').style.display = 'flex';
+    
     if (response.ok) {
       window.location.href = 'thank-you.html';
       // swal("Successfull", "Your messege successfully sent ", "success"); 
