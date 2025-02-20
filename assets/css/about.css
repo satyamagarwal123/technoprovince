@@ -38,7 +38,7 @@
 }
 
 .about-h2 {
-    color: #60a5fa;
+    color: #2495a9;
     font-size: 24px;
     margin-bottom: 24px;
     font-weight: 750;
@@ -61,7 +61,7 @@
     border: 10px solid;
     border-image-slice: 1;
     border-width: 5px;
-    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    border-image-source: linear-gradient(to left, #2495a9, #265a56);
 }
 
 .stats {
@@ -96,7 +96,7 @@
     position: absolute;
     width: 60px;
     height: 60px;
-    background-image: linear-gradient(to left, #743ad5, #d53a9d);
+    background-image: linear-gradient(to left, #2495a9, #265a56);
     border-radius: 50%;
     opacity: 0.4;
 }

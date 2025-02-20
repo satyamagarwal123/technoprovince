@@ -171,13 +171,14 @@ h6 {
   margin: 0 0 0 30px;
   border-radius: 4px;
   transition: 0.3s;
-  border: 2px solid var(--accent-color);
+  border: 2px solid #2495a9;
+  color: black;
 }
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: var(--default-color);
-  background: var(--accent-color);
+  color: white;
+  background: #2495a9;
 }
 
 @media (max-width: 1200px) {
@@ -260,9 +261,8 @@ h6 {
   }
 
   .navmenu li:hover>a,
-  .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color:#2495a9;
   }
 
   .navmenu .dropdown ul {
@@ -299,7 +299,8 @@ h6 {
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
-    background-color: var(--nav-dropdown-hover-color);
+    background-color: #2495a9;
+    color:white;
   }
 
   .navmenu .dropdown:hover>ul {
