@@ -201,3 +201,29 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+//team script
+let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            
+            const sliderContainer = document.querySelector('.slider-container');
+            sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        setInterval(() => {
+            changeSlide(1);
+        }, 3000);
