@@ -204,26 +204,38 @@
 
 
 //team script
-let currentSlide = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  const sliderContainer = document.querySelector('.slider-container');
+  
+  // Check if the slider exists on the page before proceeding
+  if (!sliderContainer) {
+      return; // Exit script if there is no slider on this page
+  }
 
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.slide');
-            if (index >= slides.length) {
-                currentSlide = 0;
-            } else if (index < 0) {
-                currentSlide = slides.length - 1;
-            } else {
-                currentSlide = index;
-            }
-            
-            const sliderContainer = document.querySelector('.slider-container');
-            sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
 
-        function changeSlide(direction) {
-            showSlide(currentSlide + direction);
-        }
+  function showSlide(index) {
+      if (index >= slides.length) {
+          currentSlide = 0;
+      } else if (index < 0) {
+          currentSlide = slides.length - 1;
+      } else {
+          currentSlide = index;
+      }
 
-        setInterval(() => {
-            changeSlide(1);
-        }, 3000);
+      sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  function changeSlide(direction) {
+      showSlide(currentSlide + direction);
+  }
+
+  // Initialize the first slide
+  showSlide(currentSlide);
+
+  // Auto-slide every 3 seconds
+  setInterval(() => {
+      changeSlide(1);
+  }, 3000);
+});
