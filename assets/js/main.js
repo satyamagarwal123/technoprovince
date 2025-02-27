@@ -204,38 +204,67 @@
 
 
 //team script
+let currentSlide = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    const sliderContainer = document.querySelector('.slider-container');
+
+    if (!sliderContainer || slides.length === 0) {
+        return; // Exit function if elements are not found
+    }
+
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+
+    sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function changeSlide(direction) {
+    showSlide(currentSlide + direction);
+}
+
+// Ensure the script runs only if the slider exists
 document.addEventListener("DOMContentLoaded", () => {
-  const sliderContainer = document.querySelector('.slider-container');
-  
-  // Check if the slider exists on the page before proceeding
-  if (!sliderContainer) {
-      return; // Exit script if there is no slider on this page
-  }
-
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.slide');
-
-  function showSlide(index) {
-      if (index >= slides.length) {
-          currentSlide = 0;
-      } else if (index < 0) {
-          currentSlide = slides.length - 1;
-      } else {
-          currentSlide = index;
-      }
-
-      sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-  }
-
-  function changeSlide(direction) {
-      showSlide(currentSlide + direction);
-  }
-
-  // Initialize the first slide
-  showSlide(currentSlide);
-
-  // Auto-slide every 3 seconds
-  setInterval(() => {
-      changeSlide(1);
-  }, 3000);
+    if (document.querySelector('.slider-container')) {
+        setInterval(() => {
+            changeSlide(1);
+        }, 3000);
+    }
 });
+
+
+
+
+
+document.querySelectorAll('.ibox').forEach(box => {
+  box.addEventListener('click', function() {
+      let boxId = this.id;
+
+      switch (boxId) {
+          case "service-id1":
+              window.location.href = "itservice";
+              break;
+          case "service-id2":
+              window.location.href = "digitalm";
+              break;
+          case "service-id3":
+              window.location.href = "data-scraping";
+              break;
+          case "service-id4":
+              window.location.href = "video-editing";
+              break;
+          default:
+              console.log("No matching ID found.");
+      }
+  });
+});
+
+
+
+
