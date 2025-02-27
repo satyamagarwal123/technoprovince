@@ -204,6 +204,40 @@
 
 
 //team script
+// let currentSlide = 0;
+
+// function showSlide(index) {
+//     const slides = document.querySelectorAll('.slide');
+//     const sliderContainer = document.querySelector('.slider-container');
+
+//     if (!sliderContainer || slides.length === 0) {
+//         return; // Exit function if elements are not found
+//     }
+
+//     if (index >= slides.length) {
+//         currentSlide = 0;
+//     } else if (index < 0) {
+//         currentSlide = slides.length - 1;
+//     } else {
+//         currentSlide = index;
+//     }
+
+//     sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+// }
+
+// function changeSlide(direction) {
+//     showSlide(currentSlide + direction);
+// }
+
+// // Ensure the script runs only if the slider exists
+// document.addEventListener("DOMContentLoaded", () => {
+//     if (document.querySelector('.slider-container')) {
+//         setInterval(() => {
+//             changeSlide(1);
+//         }, 4000);
+//     }
+// });
+
 let currentSlide = 0;
 
 function showSlide(index) {
@@ -216,13 +250,28 @@ function showSlide(index) {
 
     if (index >= slides.length) {
         currentSlide = 0;
+        // Make a smooth transition back to the first slide
+        sliderContainer.style.transition = 'none'; // Disable transition for instant move
+        sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        setTimeout(() => {
+            // Enable transition again after a small delay
+            sliderContainer.style.transition = 'transform 0.5s ease';
+        }, 50); // Slight delay before the next transition starts
     } else if (index < 0) {
         currentSlide = slides.length - 1;
+        sliderContainer.style.transition = 'none';
+        sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        setTimeout(() => {
+            sliderContainer.style.transition = 'transform 0.5s ease';
+        }, 50);
     } else {
         currentSlide = index;
     }
 
-    sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    // Apply the transform for regular transitions
+    if (index >= 0 && index < slides.length) {
+        sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
 }
 
 function changeSlide(direction) {
@@ -234,9 +283,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.querySelector('.slider-container')) {
         setInterval(() => {
             changeSlide(1);
-        }, 3000);
+        }, 4000);
     }
 });
+
 
 
 
