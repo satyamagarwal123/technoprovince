@@ -33,6 +33,18 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+
+.hero:before {
+  content: "";
+  background: color-mix(in srgb, black, transparent 30%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+  </style>
+
  
 </head>
 
@@ -88,7 +100,7 @@
 <main class="main">
 
   <!-- Hero Section -->
-  <section id="hero" class="hero section dark-background">
+  <section id="hero" class="hero section dark-background" >
 
     <img src="assets/img/Techno-Province-Background-5.jpg" alt="Techno Province" data-aos="fade-in">
 
