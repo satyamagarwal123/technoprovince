@@ -817,7 +817,7 @@ section,
   z-index: 3;
 }
 
-#h1,.hero h2 {
+.hero h2 {
   margin: 0;
   font-size: 56px;
   font-weight: 700;
