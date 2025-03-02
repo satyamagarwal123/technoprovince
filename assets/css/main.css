@@ -1360,6 +1360,20 @@ border: 2px solid rgba(255, 255, 255, 0.3);
   }
 }
 
+@media (max-width:576px){
+  .privacy-container{
+    margin-left: 14px;
+    margin-right: 14px;
+   
+  }
+}
+
+@media (max-width:768px){
+    .privacy-container{
+      word-spacing: -2px;
+    }
+  }
+
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
