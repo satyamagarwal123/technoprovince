@@ -1722,8 +1722,16 @@ border: 2px solid rgba(255, 255, 255, 0.3);
   line-height: 40px;
   }
 
-  #h2{
-    margin: 10px 0 0 0;
+
+
+    .taglines h1{
+      font-size: 56px;
+      font-weight: 700;
+      font-family: var(--nav-font);
+    }
+
+    .taglines h2{
+      margin: 10px 0 0 0;
     font-size: 20px;
     color: color-mix(in srgb, var(--default-color), transparent 30%);
     font-weight: light;
