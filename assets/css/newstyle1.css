@@ -225,7 +225,11 @@ img {
     transform: translateY(-10px);
     box-shadow: var(--box-shadow);
     border-color: transparent;
+    background-image: linear-gradient(to left, #2495a9, #265a56);
+
 }
+
+
 
 .scraping-service-icon {
     width: 60px;
@@ -243,6 +247,11 @@ img {
     height: 30px;
     color: var(--primary-color);
 }
+
+.scraping-service-card:hover h3,
+  .scraping-service-card:hover .scraping-service-icon svg {
+    color: white;
+  }
 
 .scraping-service-card h3 {
     margin-bottom: 15px;
@@ -613,8 +622,8 @@ img {
 }
 
 .scraping-feature-icon {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin-right: 20px;
     
 }
@@ -866,6 +875,10 @@ img {
   @keyframes glow {
     0% { box-shadow: 0 0 #ffc107, 0 0  #ffc107; }
     100% { box-shadow: 0 0  #ffc107, 0 0  #ffc107; }
+  }
+
+  .scraping-services .scraping-container{
+    max-width: 900px;
   }
 
   /* data-cleansing css */
