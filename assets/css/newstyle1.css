@@ -219,6 +219,7 @@ img {
     padding: 30px;
     transition: var(--transition);
     border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
 }
 
 .scraping-service-card:hover {
