@@ -1,5 +1,5 @@
 <?php
 // Store your secret API key securely
-$api_key = "AKfycbzYCyoNxO3ZXmJnxzEUgnfYx3mg9xtEkx-M9CrrETPgFvMoYGbc7vRMQeSIO5Ws8QEg/exec";
+$api_key = "AKfycbxLbfgP3Yq4RiI_3PkKQpEsvOk4zA8qTILvjBSMkiqrSHx9HGIbsRaz_6_o-HUiY7Iegw/exec";
 
 ?>
