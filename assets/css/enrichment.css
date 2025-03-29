@@ -451,6 +451,7 @@
 @media (max-width: 768px) {
     .enrichment-hero .enrichment-container {
         flex-direction: column;
+        margin-top: -42px;
     }
     
     .enrichment-hero-content {
@@ -505,8 +506,9 @@
 
 .enrichment-container {
     max-width: 1200px;
-    margin: auto;
+    /* margin: auto; */
     padding: 20px;
+    margin-top: -83px;
 }
 
 .enrichment-section-header {
