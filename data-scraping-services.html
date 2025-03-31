@@ -1092,5 +1092,13 @@
       src="https://kit.fontawesome.com/24300ce43d.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const registrationForm = document.querySelector(".registration-form");
+        setTimeout(() => {
+          registrationForm.classList.add("show");
+        }, 200); // Delay for smooth effect
+      });
+    </script>
   </body>
 </html>

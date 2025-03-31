@@ -92,6 +92,7 @@ img {
 
 .hero-scraping-content {
     z-index: 2;
+    margin-top: -52px;
 }
 
 .hero-scraping-content h1 {
@@ -840,6 +841,7 @@ img {
 @media (max-width: 576px) {
     .hero-scraping-content h1 {
         font-size: 2rem;
+        margin-top: 52px;
     }
 }
 
